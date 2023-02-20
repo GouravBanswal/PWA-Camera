@@ -35,12 +35,12 @@
                     document.getElementById("loader").innerHTML= `Opening Camera <div class="spinner-border text-dark"></div>`
                     startBtn.setAttribute("disabled",true)
                     const strim = await navigator.mediaDevices.getUserMedia({
-                        video: true,
-                        // facingMode: "user",
-                        facingMode: {
+                        video: {
+                            facingMode: {
                             exact: "environment"
                         }
-                    })
+                    },
+                })
                     player.srcObject = strim
                     document.getElementById("loader").innerHTML=""
                     startBtn.removeAttribute("disabled")
