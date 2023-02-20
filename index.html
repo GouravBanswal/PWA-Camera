@@ -33,8 +33,9 @@
 
             let mode = "user"
             swtichBtn.addEventListener("click", ()=>{
-                mode =  "environment"
-                const tracks = player.srcObject.getVideoTracks()
+                mode =  "environment" ? "user" : "environment"
+                player.classList.add("d-none")
+                 const tracks = player.srcObject.getVideoTracks()
                 for (let i = 0; i < tracks.length; i++) {
                  tracks[i].stop()
                 }
