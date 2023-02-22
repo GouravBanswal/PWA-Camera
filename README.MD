@@ -15,6 +15,6 @@ The Camera feature in a Progressive Web App allows you to easily open, close, an
 
 ## Tech Stack
 
-**Client:** HTML, CSS, JavaScript
+**Client:** HTML, Bootstrap, JavaScript
 
 
