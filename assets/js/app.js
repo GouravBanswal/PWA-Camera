@@ -6,10 +6,10 @@ import {
     swtichBtn,
     canvas,
     restartBtn,
-    changeMode,
+   
 } from './constants.js' 
 
-import {openCamera, closeCamera} from './camera.js'
+import {openCamera, closeCamera, changeMode} from './camera.js'
 
 swtichBtn.addEventListener("click", ()=>{
     // mode = mode === "environment" ? "user" : "environment"

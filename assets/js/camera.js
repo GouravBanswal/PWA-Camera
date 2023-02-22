@@ -6,10 +6,16 @@ import {
     swtichBtn,
     canvas,
     restartBtn,
-    getMode
     
 } from './constants.js' 
 // import { captureBtn, closeBtn, player, restartBtn, startBtn, swtichBtn } from "./constants.js"   
+let mode = "user"
+
+
+export const changeMode = (arg) =>{
+   mode = mode === "user" ? "environment" : "user"
+}
+
 
 export const openCamera = async() => {
     if(navigator.mediaDevices){
@@ -19,7 +25,7 @@ export const openCamera = async() => {
    try {
     const strim = await navigator.mediaDevices.getUserMedia({
         video: {
-            facingMode: getMode()
+            facingMode: mode
         },
     })
     player.srcObject = strim
